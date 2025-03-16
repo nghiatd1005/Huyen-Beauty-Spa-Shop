@@ -1,0 +1,13 @@
+# Không đẩy node_modules
+node_modules/
+
+# Không đẩy file môi trường
+backend/.env
+
+# Không đẩy file build
+frontend/dist/
+
+# Các file tạm
+*.log
+*.lock
+
