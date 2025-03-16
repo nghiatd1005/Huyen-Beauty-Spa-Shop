@@ -5,9 +5,9 @@ node_modules/
 backend/.env
 
 # Không đẩy file build
-frontend/dist/
+frontend-nuxt/dist/
+frontend-nuxt/.output/
 
 # Các file tạm
 *.log
-*.lock
-
+# *.lock  # Bỏ comment nếu muốn đẩy package-lock.json
