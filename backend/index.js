@@ -1,8 +1,7 @@
 const express = require('express');
+const route = require('./routes')
 const cors = require('cors');
-const productRoutes = require('./routes/productRoutes');
-const orderRoutes = require('./routes/orderRoutes');
-const accountRoutes = require('./routes/accountRoutes');
+
 require('dotenv').config();
 
 const app = express();
@@ -14,13 +13,8 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use('/api/products', productRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/accounts', accountRoutes);
+route(app);
 
-app.get('/', (req, res) => {
-    res.send('Backend MVC đang chạy');
-});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
